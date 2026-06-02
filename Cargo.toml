@@ -28,6 +28,7 @@ psutil = "3.2.2"
 regex = "1.7.1"
 serde_json = "1.0.108"
 tantivy = "0.21.1"
+zstd-sys = "2.0.9"
 # which = "4.4.0"
 # shells = "0.2.0"
 
@@ -36,3 +37,7 @@ target = "x86_64-unknown-linux-gnu"
 
 [target.x86_64-unknown-linux-gnu]
 linker = "/usr/local/bin/x86_64-unknown-linux-gnu-gcc"
+
+
+[patch.crates-io]
+zstd-sys = { git = "https://github.com/gyscos/zstd-rs.git", rev = "1779b385b42b08f958b767a37878dfa6a0b4f6a4" }
